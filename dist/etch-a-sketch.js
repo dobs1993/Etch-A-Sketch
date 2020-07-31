@@ -72,6 +72,9 @@ shakeButton.addEventListener('click', clearCanvas);
 
 function clearCanvas(){
 canvas.classList.add('shake');
+canvas.addEventListener('animationend', function(){
+    canvas.classList.remove('shake')
+})
 ctx.clearRect(0,0, width, height);
 };
 
